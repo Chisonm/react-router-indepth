@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import CareerDetails, { careerDetailsLoader } from "./pages/careers/CareerDetails";
 import Careers, { careersLoader } from "./pages/careers/Careers";
+import CareersError from "./pages/careers/CareersError";
 import NotFound from "./pages/NotFound";
 // help pages 
 import Faq from "./pages/help/Faq";
@@ -35,7 +36,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
         </Route>
 
-        <Route path="careers" element={<CareersLayout />}>
+        <Route path="careers" element={<CareersLayout />} errorElement={<CareersError />}>
           <Route
             index
             element={<Careers />}
