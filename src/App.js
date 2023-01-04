@@ -16,6 +16,7 @@ import Contact from "./pages/help/Contact";
 // layouts
 import RootLayout from "./layouts/RootLayout";
 import HelpLayout from "./layouts/HelpLayout";
+import NotFound from "./pages/NotFound";
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="contact" element={<Contact />}/>
         </Route>
 
+        <Route path="*" element={<NotFound />}/>
       </Route>
     )
   );
