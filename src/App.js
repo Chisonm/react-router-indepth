@@ -9,6 +9,8 @@ import {
 // pages
 import Home from "./pages/Home";
 import About from "./pages/About";
+import CareerDetails, { careerDetailsLoader } from "./pages/careers/CareerDetails";
+import Careers, { careersLoader } from "./pages/careers/Careers";
 import NotFound from "./pages/NotFound";
 // help pages 
 import Faq from "./pages/help/Faq";
@@ -17,7 +19,6 @@ import Contact from "./pages/help/Contact";
 // layouts
 import RootLayout from "./layouts/RootLayout";
 import HelpLayout from "./layouts/HelpLayout";
-import Careers, { careersLoader } from "./pages/careers/Careers";
 import CareersLayout from "./layouts/CareersLayout";
 
 function App() {
@@ -39,6 +40,11 @@ function App() {
             index
             element={<Careers />}
             loader={careersLoader}
+          />
+          <Route 
+            path=":careerId"
+            element={<CareerDetails />}
+            loader={careerDetailsLoader}
           />
         </Route>
 
